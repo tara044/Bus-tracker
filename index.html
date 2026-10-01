@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chitwan Yatayat AI - Smart Bus Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>🚌 Chitwan Yatayat AI (Narayangarh – Tandi Line)</h1>
+        <span class="badge">Live Tracking Active</span>
+    </header>
+
+    <main class="container">
+        <!-- Interactive Map showing Narayangarh to Tandi Route -->
+        <div id="map"></div>
+
+        <!-- Telemetry Sidebar for Commuters -->
+        <aside class="panel">
+            <div class="status-section">
+                <h2>Bus Status (#NA-3-KHA-1024)</h2>
+                
+                <div class="metrics">
+                    <p><span>Next Stop:</span> <strong id="next-stop" class="highlight">Chaubiskothi</strong></p>
+                    <p><span>Crowd Level:</span> <strong id="crowd-level" class="warning">Moderate</strong></p>
+                    <p><span>Est. Passengers:</span> <strong id="passenger-count">0</strong></p>
+                    <p><span>Available Seats:</span> <strong id="seats-status">Few</strong></p>
+                    <p><span>Accessibility:</span> <strong id="access-flag">None</strong></p>
+                </div>
+
+                <div class="ai-box">
+                    <p class="ai-label">AI Status Assessment</p>
+                    <p id="ai-summary">Waiting for live feed from Narayangarh Pulchowk...</p>
+                </div>
+            </div>
+
+            <!-- Hackathon Stage Camera Simulator -->
+            <div class="controls-section">
+                <h3>Chitwan Bus Camera Simulator</h3>
+                <input type="file" id="imageInput" accept="image/*" />
+                <button id="uploadBtn">Analyze Bus Frame with Gemini</button>
+            </div>
+        </aside>
+    </main>
+
+</body>
+</html>
